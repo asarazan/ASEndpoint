@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90B9BB83190D977D00FA8069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB82190D977D00FA8069 /* Foundation.framework */; };
+		90B9BB91190D977D00FA8069 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB90190D977D00FA8069 /* XCTest.framework */; };
+		90B9BB92190D977D00FA8069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB82190D977D00FA8069 /* Foundation.framework */; };
+		90B9BB94190D977D00FA8069 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB93190D977D00FA8069 /* UIKit.framework */; };
+		90B9BB97190D977D00FA8069 /* libASEndpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB7F190D977D00FA8069 /* libASEndpoint.a */; };
+		90B9BB9D190D977D00FA8069 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90B9BB9B190D977D00FA8069 /* InfoPlist.strings */; };
+		90B9BB9F190D977D00FA8069 /* ASEndpointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9BB9E190D977D00FA8069 /* ASEndpointTests.m */; };
+		CBB91F8FC47BBE6674085BD2 /* ASEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */; };
+		F5EFBC22D52F436B94E6E45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4106FAB7F7492CAAC4B2B1 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90B9BB95190D977D00FA8069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90B9BB77190D977D00FA8069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B9BB7E190D977D00FA8069;
+			remoteInfo = ASEndpoint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90B9BB7D190D977D00FA8069 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6BDACC625F304DB299CE9717 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		90B9BB7F190D977D00FA8069 /* libASEndpoint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASEndpoint.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B9BB82190D977D00FA8069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		90B9BB86190D977D00FA8069 /* ASEndpoint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASEndpoint-Prefix.pch"; sourceTree = "<group>"; };
+		90B9BB8F190D977D00FA8069 /* ASEndpointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASEndpointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B9BB90190D977D00FA8069 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		90B9BB93190D977D00FA8069 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		90B9BB9A190D977D00FA8069 /* ASEndpointTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASEndpointTests-Info.plist"; sourceTree = "<group>"; };
+		90B9BB9C190D977D00FA8069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90B9BB9E190D977D00FA8069 /* ASEndpointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASEndpointTests.m; sourceTree = "<group>"; };
+		CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEndpoint.m; sourceTree = "<group>"; };
+		CBB91B6FB7F346557FA74F24 /* ASEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEndpoint.h; sourceTree = "<group>"; };
+		ED4106FAB7F7492CAAC4B2B1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90B9BB7C190D977D00FA8069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B9BB83190D977D00FA8069 /* Foundation.framework in Frameworks */,
+				F5EFBC22D52F436B94E6E45F /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B9BB8C190D977D00FA8069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B9BB91190D977D00FA8069 /* XCTest.framework in Frameworks */,
+				90B9BB94190D977D00FA8069 /* UIKit.framework in Frameworks */,
+				90B9BB97190D977D00FA8069 /* libASEndpoint.a in Frameworks */,
+				90B9BB92190D977D00FA8069 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90B9BB76190D977D00FA8069 = {
+			isa = PBXGroup;
+			children = (
+				90B9BB84190D977D00FA8069 /* ASEndpoint */,
+				90B9BB98190D977D00FA8069 /* ASEndpointTests */,
+				90B9BB81190D977D00FA8069 /* Frameworks */,
+				90B9BB80190D977D00FA8069 /* Products */,
+				6BDACC625F304DB299CE9717 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		90B9BB80190D977D00FA8069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB7F190D977D00FA8069 /* libASEndpoint.a */,
+				90B9BB8F190D977D00FA8069 /* ASEndpointTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90B9BB81190D977D00FA8069 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB82190D977D00FA8069 /* Foundation.framework */,
+				90B9BB90190D977D00FA8069 /* XCTest.framework */,
+				90B9BB93190D977D00FA8069 /* UIKit.framework */,
+				ED4106FAB7F7492CAAC4B2B1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90B9BB84190D977D00FA8069 /* ASEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB85190D977D00FA8069 /* Supporting Files */,
+				CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */,
+				CBB91B6FB7F346557FA74F24 /* ASEndpoint.h */,
+			);
+			path = ASEndpoint;
+			sourceTree = "<group>";
+		};
+		90B9BB85190D977D00FA8069 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB86190D977D00FA8069 /* ASEndpoint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90B9BB98190D977D00FA8069 /* ASEndpointTests */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB9E190D977D00FA8069 /* ASEndpointTests.m */,
+				90B9BB99190D977D00FA8069 /* Supporting Files */,
+			);
+			path = ASEndpointTests;
+			sourceTree = "<group>";
+		};
+		90B9BB99190D977D00FA8069 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90B9BB9A190D977D00FA8069 /* ASEndpointTests-Info.plist */,
+				90B9BB9B190D977D00FA8069 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90B9BB7E190D977D00FA8069 /* ASEndpoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B9BBA2190D977D00FA8069 /* Build configuration list for PBXNativeTarget "ASEndpoint" */;
+			buildPhases = (
+				C718B597A5AC4D69B79A973B /* Check Pods Manifest.lock */,
+				90B9BB7B190D977D00FA8069 /* Sources */,
+				90B9BB7C190D977D00FA8069 /* Frameworks */,
+				90B9BB7D190D977D00FA8069 /* CopyFiles */,
+				686A9B278BBE49E194B92189 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASEndpoint;
+			productName = ASEndpoint;
+			productReference = 90B9BB7F190D977D00FA8069 /* libASEndpoint.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		90B9BB8E190D977D00FA8069 /* ASEndpointTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B9BBA5190D977D00FA8069 /* Build configuration list for PBXNativeTarget "ASEndpointTests" */;
+			buildPhases = (
+				90B9BB8B190D977D00FA8069 /* Sources */,
+				90B9BB8C190D977D00FA8069 /* Frameworks */,
+				90B9BB8D190D977D00FA8069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90B9BB96190D977D00FA8069 /* PBXTargetDependency */,
+			);
+			name = ASEndpointTests;
+			productName = ASEndpointTests;
+			productReference = 90B9BB8F190D977D00FA8069 /* ASEndpointTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90B9BB77190D977D00FA8069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Aaron Sarazan";
+			};
+			buildConfigurationList = 90B9BB7A190D977D00FA8069 /* Build configuration list for PBXProject "ASEndpoint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90B9BB76190D977D00FA8069;
+			productRefGroup = 90B9BB80190D977D00FA8069 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				90B9BB7E190D977D00FA8069 /* ASEndpoint */,
+				90B9BB8E190D977D00FA8069 /* ASEndpointTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90B9BB8D190D977D00FA8069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B9BB9D190D977D00FA8069 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		686A9B278BBE49E194B92189 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C718B597A5AC4D69B79A973B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90B9BB7B190D977D00FA8069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB91F8FC47BBE6674085BD2 /* ASEndpoint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B9BB8B190D977D00FA8069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B9BB9F190D977D00FA8069 /* ASEndpointTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90B9BB96190D977D00FA8069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B9BB7E190D977D00FA8069 /* ASEndpoint */;
+			targetProxy = 90B9BB95190D977D00FA8069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90B9BB9B190D977D00FA8069 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90B9BB9C190D977D00FA8069 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90B9BBA0190D977D00FA8069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		90B9BBA1190D977D00FA8069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90B9BBA3190D977D00FA8069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDACC625F304DB299CE9717 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ASEndpoint.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASEndpoint/ASEndpoint-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		90B9BBA4190D977D00FA8069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDACC625F304DB299CE9717 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ASEndpoint.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASEndpoint/ASEndpoint-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
+		};
+		90B9BBA6190D977D00FA8069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASEndpoint/ASEndpoint-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ASEndpointTests/ASEndpointTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		90B9BBA7190D977D00FA8069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASEndpoint/ASEndpoint-Prefix.pch";
+				INFOPLIST_FILE = "ASEndpointTests/ASEndpointTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90B9BB7A190D977D00FA8069 /* Build configuration list for PBXProject "ASEndpoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B9BBA0190D977D00FA8069 /* Debug */,
+				90B9BBA1190D977D00FA8069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B9BBA2190D977D00FA8069 /* Build configuration list for PBXNativeTarget "ASEndpoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B9BBA3190D977D00FA8069 /* Debug */,
+				90B9BBA4190D977D00FA8069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		90B9BBA5190D977D00FA8069 /* Build configuration list for PBXNativeTarget "ASEndpointTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B9BBA6190D977D00FA8069 /* Debug */,
+				90B9BBA7190D977D00FA8069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90B9BB77190D977D00FA8069 /* Project object */;
+}
