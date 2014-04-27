@@ -22,8 +22,7 @@
 
 - (void)fetch:(void (^)(id response))callback;
 {
-    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://54.186.27.203", [self path]];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.path]];
     [request setHTTPBody:[_request data]];
     [request setValue:@"application/x-protobuf" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
