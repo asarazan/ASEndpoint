@@ -73,6 +73,23 @@
     [self onPostfetch];
 }
 
+- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+{
+    NSData *myCert = [self pinnedCertificate];
+    if (!myCert) {
+        [[challenge sender] cancelAuthenticationChallenge:challenge];
+    }
+
+    SecTrustRef serverTrust = challenge.protectionSpace.serverTrust;
+    SecCertificateRef certificate = SecTrustGetCertificateAtIndex(serverTrust, 0);
+    NSData *remoteCertificateData = CFBridgingRelease(SecCertificateCopyData(certificate));
+
+    if ([remoteCertificateData isEqualToData:myCert]) {
+        NSURLCredential *credential = [NSURLCredential credentialForTrust:serverTrust];
+        [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
+    }
+}
+
 - (NSString *)path; {
     [NSException raise:@"IllegalInheritance" format:@"Must override path"];
     return nil;
@@ -81,6 +98,11 @@
 - (NSDictionary *)headers;
 {
     return @{};
+}
+
+- (NSData *)pinnedCertificate;
+{
+    return nil;
 }
 
 - (void)onPrefetch:(NSMutableURLRequest *)request;
