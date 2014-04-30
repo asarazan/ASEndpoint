@@ -7,5 +7,5 @@ Pod::Spec.new do |s|
   s.authors      = { "Aaron Sarazan" => "aaron@sarazan.net" }
   s.source       = { :git => "https://github.com/sarazan/ASEndpoint.git" }
   s.platform     = :ios, '7.0'
-  s.source_files = "**"
+  s.source_files = "ASEndpoint/**/**"
 end
