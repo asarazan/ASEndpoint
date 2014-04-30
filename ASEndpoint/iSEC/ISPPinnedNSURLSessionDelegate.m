@@ -19,7 +19,6 @@
         
         SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
         NSString *domain = [[challenge protectionSpace] host];
-        SecTrustResultType trustResult;
 
         // (asarazan) changed this to work with self-generated cert
         // Look for a pinned certificate in the server's certificate chain

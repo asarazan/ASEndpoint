@@ -19,27 +19,17 @@
         
         SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
         NSString *domain = [[challenge protectionSpace] host];
-        SecTrustResultType trustResult;
-        
-        // Validate the certificate chain with the device's trust store anyway
-        // This *might* give use revocation checking
-        SecTrustEvaluate(serverTrust, &trustResult);
-        if (trustResult == kSecTrustResultUnspecified) {
-            
-            // Look for a pinned certificate in the server's certificate chain
-            if ([ISPCertificatePinning verifyPinnedCertificateForTrust:serverTrust andDomain:domain]) {
-                
-                // Found the certificate; continue connecting
-                [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]
-                     forAuthenticationChallenge:challenge];
-            }
-            else {
-                // The certificate wasn't found in the certificate chain; cancel the connection
-                [[challenge sender] cancelAuthenticationChallenge: challenge];
-            }
+
+        // (asarazan) changed this to work with self-generated cert
+        // Look for a pinned certificate in the server's certificate chain
+        if ([ISPCertificatePinning verifyPinnedCertificateForTrust:serverTrust andDomain:domain]) {
+
+            // Found the certificate; continue connecting
+            [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]
+                 forAuthenticationChallenge:challenge];
         }
         else {
-            // Certificate chain validation failed; cancel the connection
+            // The certificate wasn't found in the certificate chain; cancel the connection
             [[challenge sender] cancelAuthenticationChallenge: challenge];
         }
     }
