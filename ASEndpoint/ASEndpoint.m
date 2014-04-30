@@ -63,7 +63,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response;
 {
-    if (response.statusCode < 200 || response.statusCode > 299) {
+    if (response.statusCode < 200 || response.statusCode > 399) {
         _failed = YES;
     }
 }
