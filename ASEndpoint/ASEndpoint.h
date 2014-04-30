@@ -32,10 +32,11 @@ typedef void (^ASEndpointCallback)(id response);
 // Implement in subclass if needed
 - (NSString *)path;
 - (NSDictionary *)headers;
-- (NSData *)pinnedCertificate;
 - (void)onPrefetch:(NSMutableURLRequest *)request;
 - (void)onPostfetch;
 - (void)onSuccess:(id)response;
 - (void)onFailure:(NSError *)error;
+
++ (BOOL)setupSSLPinsUsingDictionnary:(NSDictionary*)domainsAndCertificates;
 
 @end

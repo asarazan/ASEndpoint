@@ -18,10 +18,13 @@
 #import "ASEndpoint.h"
 #import "Descriptor.pb.h"
 #import "CueSyncDictionary.h"
+#import "ISPPinnedNSURLConnectionDelegate.h"
+#import "ISPCertificatePinning.h"
 
 @implementation ASEndpoint {
     NSMutableData *_data;
     CueSyncDictionary *_callbacks;
+    ISPPinnedNSURLConnectionDelegate *_pinDelegate;
 }
 
 - (instancetype)initWithRequest:(id)request responseClass:(Class)responseClass;
@@ -32,6 +35,7 @@
         _responseClass = responseClass;
         _data = [NSMutableData data];
         _callbacks = [CueSyncDictionary dictionary];
+        _pinDelegate = [[ISPPinnedNSURLConnectionDelegate alloc] init];
     }
     return self;
 }
@@ -75,19 +79,7 @@
 
 - (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
 {
-    NSData *myCert = [self pinnedCertificate];
-    if (!myCert) {
-        [[challenge sender] cancelAuthenticationChallenge:challenge];
-    }
-
-    SecTrustRef serverTrust = challenge.protectionSpace.serverTrust;
-    SecCertificateRef certificate = SecTrustGetCertificateAtIndex(serverTrust, 0);
-    NSData *remoteCertificateData = CFBridgingRelease(SecCertificateCopyData(certificate));
-
-    if ([remoteCertificateData isEqualToData:myCert]) {
-        NSURLCredential *credential = [NSURLCredential credentialForTrust:serverTrust];
-        [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
-    }
+    return [_pinDelegate connection:connection willSendRequestForAuthenticationChallenge:challenge];
 }
 
 - (NSString *)path; {
@@ -125,5 +117,9 @@
 
 }
 
++ (BOOL)setupSSLPinsUsingDictionnary:(NSDictionary*)domainsAndCertificates;
+{
+    return [ISPCertificatePinning setupSSLPinsUsingDictionnary:domainsAndCertificates];
+}
 
 @end
