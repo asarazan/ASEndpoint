@@ -14,6 +14,9 @@
 		90B9BB97190D977D00FA8069 /* libASEndpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9BB7F190D977D00FA8069 /* libASEndpoint.a */; };
 		90B9BB9D190D977D00FA8069 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90B9BB9B190D977D00FA8069 /* InfoPlist.strings */; };
 		90B9BB9F190D977D00FA8069 /* ASEndpointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9BB9E190D977D00FA8069 /* ASEndpointTests.m */; };
+		CBB910A72015659766DBEF5C /* ISPPinnedNSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9188D8451E045FED343A4 /* ISPPinnedNSURLConnectionDelegate.m */; };
+		CBB91C13DC8948022DDA82A4 /* ISPPinnedNSURLSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB91216B8EE56547C3F9AC8 /* ISPPinnedNSURLSessionDelegate.m */; };
+		CBB91E8276DBC25D4BB5E9F0 /* ISPCertificatePinning.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9105D855C24CA4B1FAA4A /* ISPCertificatePinning.m */; };
 		CBB91F8FC47BBE6674085BD2 /* ASEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */; };
 		F5EFBC22D52F436B94E6E45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4106FAB7F7492CAAC4B2B1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,8 +54,14 @@
 		90B9BB9A190D977D00FA8069 /* ASEndpointTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASEndpointTests-Info.plist"; sourceTree = "<group>"; };
 		90B9BB9C190D977D00FA8069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90B9BB9E190D977D00FA8069 /* ASEndpointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASEndpointTests.m; sourceTree = "<group>"; };
+		CBB9105D855C24CA4B1FAA4A /* ISPCertificatePinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPCertificatePinning.m; sourceTree = "<group>"; };
+		CBB91216B8EE56547C3F9AC8 /* ISPPinnedNSURLSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPinnedNSURLSessionDelegate.m; sourceTree = "<group>"; };
+		CBB9150E6C30A4B73DBC6632 /* ISPPinnedNSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPPinnedNSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		CBB915177F38198BD8B22A48 /* ISPCertificatePinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPCertificatePinning.h; sourceTree = "<group>"; };
+		CBB9188D8451E045FED343A4 /* ISPPinnedNSURLConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPinnedNSURLConnectionDelegate.m; sourceTree = "<group>"; };
 		CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEndpoint.m; sourceTree = "<group>"; };
 		CBB91B6FB7F346557FA74F24 /* ASEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEndpoint.h; sourceTree = "<group>"; };
+		CBB91B81B7A3A4DD42C824D0 /* ISPPinnedNSURLSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPPinnedNSURLSessionDelegate.h; sourceTree = "<group>"; };
 		ED4106FAB7F7492CAAC4B2B1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +126,7 @@
 				90B9BB85190D977D00FA8069 /* Supporting Files */,
 				CBB91AE45CC94A68B75A89BA /* ASEndpoint.m */,
 				CBB91B6FB7F346557FA74F24 /* ASEndpoint.h */,
+				CBB9156A426FF2F6C23C992D /* iSEC */,
 			);
 			path = ASEndpoint;
 			sourceTree = "<group>";
@@ -145,6 +155,19 @@
 				90B9BB9B190D977D00FA8069 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBB9156A426FF2F6C23C992D /* iSEC */ = {
+			isa = PBXGroup;
+			children = (
+				CBB915177F38198BD8B22A48 /* ISPCertificatePinning.h */,
+				CBB9105D855C24CA4B1FAA4A /* ISPCertificatePinning.m */,
+				CBB9150E6C30A4B73DBC6632 /* ISPPinnedNSURLConnectionDelegate.h */,
+				CBB9188D8451E045FED343A4 /* ISPPinnedNSURLConnectionDelegate.m */,
+				CBB91B81B7A3A4DD42C824D0 /* ISPPinnedNSURLSessionDelegate.h */,
+				CBB91216B8EE56547C3F9AC8 /* ISPPinnedNSURLSessionDelegate.m */,
+			);
+			path = iSEC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB91F8FC47BBE6674085BD2 /* ASEndpoint.m in Sources */,
+				CBB91E8276DBC25D4BB5E9F0 /* ISPCertificatePinning.m in Sources */,
+				CBB910A72015659766DBEF5C /* ISPPinnedNSURLConnectionDelegate.m in Sources */,
+				CBB91C13DC8948022DDA82A4 /* ISPPinnedNSURLSessionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
