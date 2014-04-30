@@ -8,4 +8,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/sarazan/ASEndpoint.git" }
   s.platform     = :ios, '7.0'
   s.source_files = "ASEndpoint/**/**"
+  s.requires_arc = true
 end
