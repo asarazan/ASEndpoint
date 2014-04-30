@@ -25,6 +25,7 @@
     NSMutableData *_data;
     CueSyncDictionary *_callbacks;
     ISPPinnedNSURLConnectionDelegate *_pinDelegate;
+    BOOL _failed;
 }
 
 - (instancetype)initWithRequest:(id)request responseClass:(Class)responseClass;
@@ -60,17 +61,26 @@
     [_data appendData:data];
 }
 
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response;
+{
+    if (response.statusCode < 200 || response.statusCode > 299) {
+        _failed = YES;
+    }
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
-    @try {
-        id response = [_responseClass parseFromData:_data];
-        [self onSuccess:response];
-        ASEndpointCallback callback = _callbacks[@(connection.hash)];
-        if (callback) {
-            callback(response);
+    if (!_failed) {
+        @try {
+            id response = [_responseClass parseFromData:_data];
+            [self onSuccess:response];
+            ASEndpointCallback callback = _callbacks[@(connection.hash)];
+            if (callback) {
+                callback(response);
+            }
+        } @catch (NSException *e) {
+            [self onFailure:nil];
         }
-    } @catch (NSException *e) {
-        [self onFailure:nil];
     }
     [self onPostfetch];
 }
