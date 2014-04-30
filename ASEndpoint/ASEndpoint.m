@@ -48,7 +48,7 @@
     [request setHTTPMethod:@"POST"];
     [request setAllHTTPHeaderFields:self.headers];
     [self onPrefetch:request];
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
     if (callback) {
         _callbacks[@(conn.hash)] = [callback copy];
     }
@@ -62,11 +62,15 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
-    id response = [_responseClass parseFromData:_data];
-    [self onSuccess:response];
-    ASEndpointCallback callback = _callbacks[@(connection.hash)];
-    if (callback) {
-        callback(response);
+    @try {
+        id response = [_responseClass parseFromData:_data];
+        [self onSuccess:response];
+        ASEndpointCallback callback = _callbacks[@(connection.hash)];
+        if (callback) {
+            callback(response);
+        }
+    } @catch (NSException *e) {
+        [self onFailure:nil];
     }
     [self onPostfetch];
 }
